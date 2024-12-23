@@ -8,4 +8,4 @@ class NumSides(enum.Enum):
 
 if __name__ == '__main__':
     print(NumSides.__members__)
-
+    assert str(NumSides(4)) == 'NumSides.Rectangle'
