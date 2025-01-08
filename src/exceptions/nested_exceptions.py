@@ -26,7 +26,7 @@ class Person:
         if isinstance(value, int) and value > 0:
             self._age = value
         else:
-            raise ValueError(f"Cannot set age={value} for {self.name}")
+            raise ValueError(f"Invalid age={value}")
 
     def __repr__(self):
         return f"{self.__class__.__name__}({self.name}, {self.age})"
@@ -41,7 +41,7 @@ for name, attribs in json_data.items():
             except AttributeError:
                 print(f"Ignoring unallowed attribute {name}.{key}={value}")
     except ValueError as ex:
-        print(ex)
+        print(f"Data for {name} contains an invalid attribute {ex}")
     else:
         persons.append(p)
 
