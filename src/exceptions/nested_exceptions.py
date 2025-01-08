@@ -29,7 +29,7 @@ class Person:
             raise ValueError(f"Cannot set age={value} for {self.name}")
 
     def __repr__(self):
-        return f"{self.name} {self.age}"
+        return f"{self.__class__.__name__}({self.name}, {self.age})"
 
 persons = []
 for name, attribs in json_data.items():
